@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "7e1c2f48-aae8-4c0f-8abc-b9321e2ecbdb",
+		"name": "Student API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16271651"
+	},
+	"item": [
+		{
+			"name": "POST - Login to get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\":\"admin\",\r\n\"password\":\"password\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/student/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Create new student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NzMzMTc0MywiaWF0IjoxNjc3MzEzNzQzfQ.zwVt-m1NJirWe4cPUawdZz9k4GpbPTT7usDyhrqfimiQUHinZ0ZIHEjDWoL1zJmlJeCp8jqARB7VOA2xdKjrkw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"name\":\"Alana Hemsworth\",\r\n \"age\":22,\r\n \"matricNo\":\"AB6778\",\r\n \"courseId\":3\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/student/api/student/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"api",
+						"student",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Find student by course id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NzMzMTc0MywiaWF0IjoxNjc3MzEzNzQzfQ.zwVt-m1NJirWe4cPUawdZz9k4GpbPTT7usDyhrqfimiQUHinZ0ZIHEjDWoL1zJmlJeCp8jqARB7VOA2xdKjrkw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/student/api/student/findStudentByCourseId?courseId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"api",
+						"student",
+						"findStudentByCourseId"
+					],
+					"query": [
+						{
+							"key": "courseId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Find All student",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NzMzMTc0MywiaWF0IjoxNjc3MzEzNzQzfQ.zwVt-m1NJirWe4cPUawdZz9k4GpbPTT7usDyhrqfimiQUHinZ0ZIHEjDWoL1zJmlJeCp8jqARB7VOA2xdKjrkw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/student/api/student/findAllStudent",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"api",
+						"student",
+						"findAllStudent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Update student by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NzMzMTc0MywiaWF0IjoxNjc3MzEzNzQzfQ.zwVt-m1NJirWe4cPUawdZz9k4GpbPTT7usDyhrqfimiQUHinZ0ZIHEjDWoL1zJmlJeCp8jqARB7VOA2xdKjrkw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"name\": \"Alana Lam Hemsworth\",\r\n    \"age\": 22,\r\n    \"matricNo\": \"AB6779\",\r\n    \"courseId\": 1\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/student/api/student/update/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"api",
+						"student",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Delete student by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NzMzMTc0MywiaWF0IjoxNjc3MzEzNzQzfQ.zwVt-m1NJirWe4cPUawdZz9k4GpbPTT7usDyhrqfimiQUHinZ0ZIHEjDWoL1zJmlJeCp8jqARB7VOA2xdKjrkw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/student/api/student/delete/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"api",
+						"student",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Find all course",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NzMzMTc0MywiaWF0IjoxNjc3MzEzNzQzfQ.zwVt-m1NJirWe4cPUawdZz9k4GpbPTT7usDyhrqfimiQUHinZ0ZIHEjDWoL1zJmlJeCp8jqARB7VOA2xdKjrkw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/student/api/student/findAllCourse",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"api",
+						"student",
+						"findAllCourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Find student by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3NzMzMTc0MywiaWF0IjoxNjc3MzEzNzQzfQ.zwVt-m1NJirWe4cPUawdZz9k4GpbPTT7usDyhrqfimiQUHinZ0ZIHEjDWoL1zJmlJeCp8jqARB7VOA2xdKjrkw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/student/api/student/findStudentById/12",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"api",
+						"student",
+						"findStudentById",
+						"12"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
