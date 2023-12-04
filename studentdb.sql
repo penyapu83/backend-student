@@ -26,9 +26,5 @@ CREATE TABLE `info` (
   PRIMARY KEY (`id`),
   KEY `info_FK` (`course_id`),
   CONSTRAINT `info_FK` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `` (`id`,`name`,`age`,`matric_no`,`course_id`) VALUES (1,'Chris Hemsworth',23,'AB12345',2);
-INSERT INTO `` (`id`,`name`,`age`,`matric_no`,`course_id`) VALUES (2,'Alana Lam Hemsworthf',27,'ABC5555',1);
-INSERT INTO `` (`id`,`name`,`age`,`matric_no`,`course_id`) VALUES (11,'Marrisa Edward',23,'12344',2);
-INSERT INTO `` (`id`,`name`,`age`,`matric_no`,`course_id`) VALUES (12,'Shahrul Isham',20,'A89978',6);
